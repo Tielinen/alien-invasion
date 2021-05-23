@@ -35,7 +35,7 @@ export class Settings {
     // Bullet settings
     this.bullet = {
       startSpeed: 3,
-      allowed: 5,
+      allowed: 3,
       width: 3,
       height: 15,
       color: 'rgb(60, 60, 60)',
