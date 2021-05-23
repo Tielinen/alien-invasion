@@ -39,8 +39,10 @@ export function eventListeners(screen, settings, ship, bullets) {
   });
 
   document.addEventListener('touchend', (event) => {
-    ship.movingRight = false;
-    ship.movingLeft = false;
+    if (event.touches.length === 0) {
+      ship.movingRight = false;
+      ship.movingLeft = false;
+    }
   });
 
 
