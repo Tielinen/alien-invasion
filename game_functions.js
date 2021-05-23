@@ -72,8 +72,6 @@ function newShip(settings, screen, ship, bullets, aliens) {
 function resetGame(settings, screen, ship, bullets, aliens) {
   settings.gameStats.gameActive = false;
   settings.gameStats.ships = settings.ship.count;
-  console.log(settings.gameStats.ships, settings.ship.count);
-
 
   ship.center(screen);
   clearBullets(bullets);

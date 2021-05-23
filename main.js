@@ -10,7 +10,8 @@
 || can context be in every class?
 || empty lines after functions.
 
-|| fullwindow mode.
+|| let user choose window size
+|| delete zip from github
 
 
 */

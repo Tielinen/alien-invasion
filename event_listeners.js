@@ -30,6 +30,20 @@ export function eventListeners(screen, settings, ship, bullets) {
     }
   });
 
+  document.addEventListener('touchstart', (event) => {
+    if (event.touches[0].screenX > ship.rect.centerX) ship.movingRight = true;
+    if (event.touches[0].screenX < ship.rect.centerX) ship.movingLeft = true;
+
+    if (event.touches.length > 1) fireBullet(settings, ship, bullets);
+    console.log(event.touches.length);
+  });
+
+  document.addEventListener('touchend', (event) => {
+    ship.movingRight = false;
+    ship.movingLeft = false;
+  });
+
+
   screen.button.addEventListener('click', () => {
     screen.scoreBoard.score = 0;
     settings.gameStats.gameActive = true;
