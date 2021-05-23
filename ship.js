@@ -29,14 +29,20 @@ export class Ship {
   update(settings, screen) {
     // Update ships position based on movement flag.
 
-    // Move right
-    if (this.rect.right >= screen.width) this.movingRight = false;
+    // Move right if can
+    if (
+      this.rect.right >= screen.width || this.rect.centerX > this.screenX) {
+      this.movingRight = false;
+    }
+
     if (this.movingRight) {
       this.rect.x += settings.ship.speedFactor;
     }
 
     // Move left
-    if (this.rect.left <= 0) this.movingLeft = false;
+    if (this.rect.left <= 0 || this.rect.centerX < this.screenX) {
+      this.movingLeft = false;
+    }
     if (this.movingLeft) {
       this.rect.x -= settings.ship.speedFactor;
     }

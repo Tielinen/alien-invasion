@@ -34,6 +34,8 @@ export function eventListeners(screen, settings, ship, bullets) {
     if (event.touches[0].screenX > ship.rect.centerX) ship.movingRight = true;
     if (event.touches[0].screenX < ship.rect.centerX) ship.movingLeft = true;
 
+    ship.screenX = event.touches[0].screenX;
+
     if (event.touches.length > 1) fireBullet(settings, ship, bullets);
     console.log(event.touches.length);
   });
