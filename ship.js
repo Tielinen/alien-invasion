@@ -30,8 +30,8 @@ export class Ship {
     // Update ships position based on movement flag.
 
     // Move right if can
-    if (
-      this.rect.right >= screen.width || this.rect.centerX > this.screenX) {
+    console.log(this.screenX);
+    if (this.rect.right >= screen.width || this.rect.centerX > this.screenX) {
       this.movingRight = false;
     }
 

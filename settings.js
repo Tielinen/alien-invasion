@@ -19,13 +19,13 @@ export class Settings {
 
     // Ships settings
     this.ship = {
-      startSpeed: 3,
+      startSpeed: 1,
       count: 3,
     };
 
     // Alien settings
     this.alien = {
-      startSpeed: 2.0,
+      startSpeed: 1.0,
       dropSpeed: 10,
       direction: 1,
       points: 50,
@@ -34,7 +34,7 @@ export class Settings {
 
     // Bullet settings
     this.bullet = {
-      startSpeed: 6,
+      startSpeed: 3,
       allowed: 5,
       width: 3,
       height: 15,
